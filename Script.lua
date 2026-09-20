@@ -22,16 +22,16 @@ local Window = Rayfield:CreateWindow({
    },
 
    Discord = {
-      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
-      Invite = "noinvitelink", -- The Discord invite code, do not include Discord.gg/. E.g. Discord.gg/ABCD would be ABCD
-      RememberJoins = true -- Set this to false to make them join the Discord every time they load it up
+      Enabled = true, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "dNUybP5jRh", -- The Discord invite code, do not include Discord.gg/. E.g. Discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set s to false to make them join the Discord every time they load it up
    },
 
    KeySystem = true, -- Set this to true to use our key system
    KeySettings = {
       Title = "Key System",
       Subtitle = "Key System",
-      Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
+      Note = "Join my discord server and get key ", -- Use this to tell the user how to get a key
       FileName = "Key", -- It is recommended to use something unique, as other scripts using Rayfield may overwrite your key file
       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
@@ -70,7 +70,7 @@ local Slider = Tab:CreateSlider({
    Flag = "Slider2", -- A flag is the identifier for the configuration file; make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
    
-   game.Players.LocalPlayer.Character.Humanoid.JumpPower - Value
+   game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
    Rayfield:Notify({
    Title = "Heigth set Sucsessful",
    Content = "Sucsess",
